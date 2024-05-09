@@ -35,15 +35,10 @@ public class ProductController {
         productService.saveProduct(product);
     }
 
-    // Delete product
-    @DeleteMapping("/product/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT) // HTTP 204 - No Content
-    public ResponseEntity<String> deleteProduct(@PathVariable("id") Long id){
-        boolean deleted = productService.deleteProductById(id);
-        if (!deleted) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found with ID: " + id);
-        }
-        return new ResponseEntity<>("The product [" + id + "] was deleted", HttpStatus.OK);
+    @GetMapping("/product/{id}")
+    public ResponseEntity<Product> getProducts(@PathVariable("id") Long id) {
+        Product product = productService.getProductById(id);
+        return ResponseEntity.ok(product);
     }
 
     // Update existing product
@@ -69,6 +64,17 @@ public class ProductController {
         productService.updateProduct(existingProduct);
 
         return new ResponseEntity<>("The product [" + id + "] was updated", HttpStatus.OK);
+    }
+
+    // Delete product
+    @DeleteMapping("/product/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT) // HTTP 204 - No Content - for successful deletion with no content
+    public void deleteProduct(@PathVariable("id") Long id){
+        boolean deleted = productService.deleteProductById(id);
+        if (!deleted) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found with ID: " + id);
+        }
+       // return new ResponseEntity<>("The product [" + id + "] was deleted", HttpStatus.OK);
     }
 
 }

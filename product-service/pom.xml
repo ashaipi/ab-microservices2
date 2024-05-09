@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>com.ashaipi</groupId>
-        <artifactId>ab-microservices2</artifactId>
+        <artifactId>AmericanBoutiqueMicroservices2</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

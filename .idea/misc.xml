@@ -13,6 +13,7 @@
       <set>
         <option value="$PROJECT_DIR$/Demo12/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/frontend/pom.xml" />
         <option value="$PROJECT_DIR$/test123/pom.xml" />
         <option value="$PROJECT_DIR$/test223/pom.xml" />
       </set>

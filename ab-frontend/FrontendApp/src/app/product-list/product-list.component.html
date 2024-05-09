@@ -1,0 +1,18 @@
+
+<section id="products">
+    <div class="container">
+        <!-- Product cards will be dynamically added here -->
+        <div class="product" *ngFor = "let product of products">
+            <img [src]="'assets/images/' + product.img" alt="{{product.img}}">
+
+            <div class="product-content">
+                <h5>{{ product.productName }}</h5>
+                <p>{{product.price}} </p>
+                <button (click) = "updateProduct(product.id)" class="remove-btn">Update</button>
+                <br>
+                <button (click) = "deleteProduct(product.id)" class="remove-btn" style="background-color: maroon">Delete</button>
+            </div>
+        </div>
+    </div>
+</section>
+
