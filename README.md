@@ -1,4 +1,4 @@
-#American Boutique - Online Clothes Shop
+## American Boutique - Online Clothes Shop
 #Project Overview
 Welcome to the American Boutique, an online clothes shop designed to provide a seamless shopping experience. This project leverages a microservices architecture to ensure scalability, flexibility, and maintainability. The application is developed using Java Spring Boot and interacts with a MySQL database. It exposes a RESTful API for interaction with various services.
 
